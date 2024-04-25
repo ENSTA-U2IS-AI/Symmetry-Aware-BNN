@@ -138,29 +138,18 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">NECO</span>
+		<span style="font-size:36px">A Symmetry-Aware Exploration of Bayesian Neural Network Posteriors</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
 					<td align=center width=300px>
 						<center>
-							<span style="font-size:24px"><a href="https://www.linkedin.com/in/mouinbenammar">Mouïn Ben&nbspAmmar</a></span>
+							<span style="font-size:24px"><a href="https://www.linkedin.com/in/olivier-laurent-100772190/">Olivier Laurent/a></span>
 						</center>
 					</td>
 					<td align=center width=300px>
 						<center>
-							<span style="font-size:24px"><a href="https://www.linkedin.com/in/belkhirnacim/">Nacim Belkhir</a></span>
-						</center>
-					</td>
-					<td align=center width=300px>
-						<center>
-							<span style="font-size:24px"><a href="https://www.linkedin.com/in/sebastian-gabriel-popescu-312a701b5">Sebastian Popescu</a></span>
-						</center>
-					</td>
-
-					<td align=center width=300px>
-						<center>
-							<span style="font-size:24px"><a href="https://www.linkedin.com/in/manzanera-antoine-6787806">Antoine Manzanera</a></span>
+							<span style="font-size:24px"><a href="https://scholar.google.fr/citations?user=T7LppsgAAAAJ&hl=fr">Emanuel Aldea</a></span>
 						</center>
 					</td>
 					<td align=center width=300px>
@@ -173,10 +162,10 @@
 			<table align=center width=250px>
 				<tr>
 					<td align=center width=120px>
-						<center> <span style="font-size:32px"><a href='https://openreview.net/forum?id=9ROuKblmi7'>[Paper]</a></span> </center>
+						<center> <span style="font-size:32px"><a href='https://arxiv.org/abs/2310.08287'>[Paper]</a></span> </center>
 					</td>
 						<td align=center width=120px>
-							<center><span style="font-size:32px"><a href='https://github.com/ENSTA-U2IS-AI/NECO'>[GitHub]</a></span><br></center>
+							<center><span style="font-size:32px"><a href='https://github.com/ENSTA-U2IS-AI/torch-uncertainty'>[GitHub]</a></span><br></center>
 					</td>
 				</tr>
 			</table>
@@ -190,28 +179,11 @@
 	<hr>
 	<center><h1>Talk</h1></center>
 	<p align="center">
-		<iframe width="800" height="600" src="https://github.com/ENSTA-U2IS-AI/NECO/blob/master/resources/teaser.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+	<iframe width="900" height="400" src="example_axis.png" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</p>
+	<p style="text-align:center;">Caption: Weight-space symmetries greatly impact the estimated Bayesian posterior. Permutation symmetries clearly increase the number of modes of the posterior distribution in the case of the last layer of a 2-hidden neuron perceptron.</p>
+	
 
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-		<hr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for ^^ <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td>
-			</tr>
-		</table>
-	</center>
 
 	<hr>
 
@@ -219,7 +191,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Detecting out-of-distribution (OOD) data is a critical challenge in machine learning due to model overconfidence, often without awareness of their epistemological limits. We hypothesize that "neural collapse", a phenomenon affecting in-distribution data for models trained beyond loss convergence, also influences OOD data. To benefit from this interplay, we introduce NECO, a novel post-hoc method for OOD detection, which leverages the geometric properties of “neural collapse” and of principal component spaces to identify OOD data. Our extensive experiments demonstrate that NECO achieves state-of-the-art results on both small and large-scale OOD detection tasks while exhibiting strong generalization capabilities across different network architectures. Furthermore, we provide a theoretical explanation for the effectiveness of our method in OOD detection. We plan to release the code after the anonymity period.
+				The distribution of modern deep neural networks (DNNs) weights -- crucial for uncertainty quantification and robustness -- is an eminently complex object due to its extremely high dimensionality. This paper presents one of the first large-scale explorations of the posterior distribution of deep Bayesian Neural Networks (BNNs), expanding its study to real-world vision tasks and architectures. Specifically, we investigate the optimal approach for approximating the posterior, analyze the connection between posterior quality and uncertainty quantification, delve into the impact of modes on the posterior, and explore methods for visualizing the posterior. Moreover, we uncover weight-space symmetries as a critical aspect for understanding the posterior. To this extent, we develop an in-depth assessment of the impact of both permutation and scaling symmetries that tend to obfuscate the Bayesian posterior. While the first type of transformation is known for duplicating modes, we explore the relationship between the latter and L2 regularization, challenging previous misconceptions. Finally, to help the community improve our understanding of the Bayesian posterior, we release the <a href="https://huggingface.co/datasets/torch-uncertainty/Checkpoints">first large-scale checkpoint dataset</a>, including thousands of real-world models, along with our <a href="https://github.com/ENSTA-U2IS-AI/torch-uncertainty">code</a>.			
 			</td>
 		</tr>
 	</table>
@@ -252,20 +224,12 @@
 			</tr>
 		</center>
 	</table>
-	<table align=center width=400px>
-		<tr>
-			<td align=center width=400px>
-				<center>
-					<td>< class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
 	<table align=center width=850px>
 		<center>
 			<tr>
 				<td>
-					Short description if wanted
+					The code consists of the dataset library available for download on <a href="https://huggingface.co/datasets/torch-uncertainty/Checkpoints">Hugging Face</a> and the code contained within this library.
+
 				</td>
 			</tr>
 		</center>
@@ -283,10 +247,10 @@
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><span style="font-size:14pt">Laurent, O., Aldea, E., & Franchi, G.<br>
+				<b>A symmetry-aware exploration of bayesian neural network posteriors.</b><br>
+				In ICLR, 2024.<br>
+				(hosted on <a href="https://arxiv.org/abs/2310.08287">ArXiv</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
