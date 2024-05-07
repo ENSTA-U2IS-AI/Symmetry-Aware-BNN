@@ -1,0 +1,10 @@
+theme: jekyll-theme-cayman
+openreview_url: https://openreview.net/forum?id=FOSBQuXgAq
+arxiv_url: https://arxiv.org/abs/2310.08287
+poster_url: ./assets/poster.pdf
+slides_url: ./assets/slides.pdf
+tu_url: https://github.com/ENSTA-U2IS-AI/torch-uncertainty
+code_url: https://github.com/o-laurent/Symmetries-BNN-Posteriors
+dataset_url: https://huggingface.co/datasets/torch-uncertainty/Checkpoints
+title: A Symmetry-Aware Exploration of Bayesian Neural Network Posteriors
+tagline: This website contains information regarding the paper A Symmetry-Aware Exploration of Bayesian Neural Network Posteriors.

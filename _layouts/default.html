@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+    <!-- MathJax -->
+    <style>
+      body {
+        color: #344854;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+      .MathJax {
+        padding: 0.25em;
+        min-width: 0 ! important;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      table {
+        display: table !important;
+      }
+      .my_blue {
+        color: #4472C4;
+      }
+      .my_red {
+        color: #FF0000;
+      }
+      .my_orange {
+        color: #ED7D31;
+      }
+      .my_deepred {
+        color: rgb(196, 78, 82)
+      }
+      .my_box {
+        border: 2px solid #159957;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      blockquote p strong {
+        color: #ED7D31;
+      }
+      blockquote p {
+        color: #344854;
+      }
+    </style>
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          autoload: {
+            boldsymbol: ['boldsymbol']
+          }
+        }
+      };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.publication }}</h2>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+      <a href="{{ site.openreview_url }}" class="btn">OpenReview</a>
+      <a href="{{ site.arxiv_url }}" class="btn">ArXiv</a>
+      <a href="{{ site.tu_url }}" class="btn">TorchUncertainty</a>
+      <a href="{{ site.code_url }}" class="btn">Code</a>
+      <a href="{{ site.dataset_url }}" class="btn">Dataset</a>
+      <a href="{{ site.poster_url }}" class="btn">Poster</a>
+      <a href="{{ site.slides_url }}" class="btn">Slides</a>
+      <!-- <a href="{{ site.video_url }}" class="btn">Presentation</a> -->
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner">Olivier Laurent • Emanuel Aldea • Gianni Franchi • 2024 • Template by Trung Trinh et al.</span>
+        {% endif %}
+      </footer>
+    </main>
+  </body>
+</html>
